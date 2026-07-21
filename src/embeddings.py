@@ -10,8 +10,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 
 logger = logging.getLogger(__name__)
 
-# Default embedding model — lightweight, fast, CPU-friendly
-DEFAULT_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+# Default embedding model — multilingual, aligns 50+ languages in same semantic space
+DEFAULT_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 # Singleton instance to avoid reloading the model
 _embedding_model = None
