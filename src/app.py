@@ -14,6 +14,10 @@ from pathlib import Path
 
 import streamlit as st
 
+# Silence noisy transformers import warnings from Streamlit's file watcher
+# (torchvision is an optional dep we don't need — the watcher just tries to inspect everything)
+logging.getLogger("transformers").setLevel(logging.ERROR)
+
 # Add project root to Python path so 'src' package is importable
 # when running via 'streamlit run src/app.py'
 sys.path.insert(0, str(Path(__file__).parent.parent))

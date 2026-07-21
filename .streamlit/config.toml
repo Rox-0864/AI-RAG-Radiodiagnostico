@@ -1,0 +1,6 @@
+[logger]
+# Silence transformers module import warnings from file watcher
+level = "error"
+
+[browser]
+gatherUsageStats = false
