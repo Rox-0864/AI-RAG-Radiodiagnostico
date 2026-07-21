@@ -126,11 +126,22 @@ src/
 | Componente | Tecnologia | Descripcion |
 |------------|------------|-------------|
 | **LLM** | [Ollama](https://ollama.com) + `llama3.2:3b` | Modelo de lenguaje de 3B parametros, ejecutado localmente. Excelente rendimiento multilingue. |
-| **Embeddings** | [Sentence Transformers](https://sbert.net) + `all-MiniLM-L6-v2` | Modelo de 90MB que genera vectores de 384 dimensiones. Corre en CPU sin GPU. |
+| **Embeddings** | [Sentence Transformers](https://sbert.net) + `paraphrase-multilingual-MiniLM-L12-v2` | Modelo multilingüe de 470MB, 384 dimensiones. Alinea español e inglés en el mismo espacio semántico. |
 | **Vector Store** | [ChromaDB](https://trychroma.com) | Base de datos vectorial open-source, persistencia en disco. |
 | **PDF Processing** | [pdfplumber](https://github.com/jsvine/pdfplumber) | Extraccion de texto y tablas desde PDFs con alta precision. |
 | **Orchestration** | [LangChain](https://langchain.com) | Framework para construir cadenas RAG. |
 | **UI** | [Streamlit](https://streamlit.io) | Interfaz web interactiva con componentes de chat. |
+| **Deploy** | [Google Cloud](https://cloud.google.com) | VM e2-standard-4 (4 vCPU, 16GB RAM) en us-central1. |
+
+---
+
+## Demo en linea
+
+El agente está desplegado en Google Cloud y accesible públicamente:
+
+**http://34.171.92.191:8501**
+
+> Nota: Las respuestas toman 1-2 minutos porque el modelo corre en CPU sin GPU.
 
 ---
 
